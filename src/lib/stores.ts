@@ -26,3 +26,6 @@ export function stopPreloader() {
 	}
 	preloaderProgress.set(100);
 }
+
+export const backgroundColor = writable('#10100e');
+export const customCursor = writable(false);

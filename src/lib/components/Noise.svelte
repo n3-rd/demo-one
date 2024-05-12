@@ -76,6 +76,6 @@
 
 <canvas
 	id="noise"
-	class="noise min-w-screen pointer-events-none fixed z-30 h-screen opacity-10"
+	class="noise pointer-events-none fixed z-30 h-screen w-screen opacity-10"
 	bind:this={canvas}
 ></canvas>

@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      lenis:
+        specifier: ^1.0.45
+        version: 1.0.45
       motion:
         specifier: ^10.17.0
         version: 10.17.0
+      ukiyojs:
+        specifier: ^4.2.0
+        version: 4.2.0
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
@@ -60,6 +66,9 @@ importers:
       svelte:
         specifier: ^4.2.7
         version: 4.2.16
+      svelte-body:
+        specifier: ^1.4.0
+        version: 1.4.0(svelte@4.2.16)
       svelte-check:
         specifier: ^3.6.0
         version: 3.7.1(postcss-load-config@4.0.2(postcss@8.4.38))(postcss@8.4.38)(svelte@4.2.16)
@@ -85,6 +94,9 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@darkroom.engineering/tempus@0.0.46':
+    resolution: {integrity: sha512-s5vav3KMHYezvUCl4ee5epg0oimF6M8C9gAaKxFnFaTvX2q3ywFDryIv6XLd0mRFUt3S1uHDJqKaiEcs2ZVSvw==}
 
   '@esbuild/aix-ppc64@0.20.2':
     resolution: {integrity: sha512-D+EBOJHXdNZcLJRBkhENNG8Wji2kgc9AZ9KiPr1JuZjsNtyHzrsfLRrY0tk2H2aoFu6RANO1y1iPPUCDYWkb5g==}
@@ -608,6 +620,14 @@ packages:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
 
+  clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
+
   code-red@1.0.4:
     resolution: {integrity: sha512-7qJWqItLA8/VPVlKJlFXU+NBlo/qyfs39aJcuMT/2ere32ZqvF5OSxgdM5xOfJJ7O429gg2HM47y8v9P+9wrNw==}
 
@@ -641,6 +661,9 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
+
+  csstype@3.1.3:
+    resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
   debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
@@ -956,6 +979,17 @@ packages:
 
   known-css-properties@0.31.0:
     resolution: {integrity: sha512-sBPIUGTNF0czz0mwGGUoKKJC8Q7On1GPbCSFPfyEsfHb2DyBG0Y4QtV+EVWpINSaiGKZblDNuF5AezxSgOhesQ==}
+
+  lenis@1.0.45:
+    resolution: {integrity: sha512-wiaYRxr7rK1rY+dhGdMLowV0rkjg+1B2nI50Igyu5USkjDY6lkBNCJi0mVaSL/X3ECyAm/oA0nsihq8ic3p9wg==}
+    peerDependencies:
+      react: '>=17.0.0'
+      react-dom: '>=17.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
@@ -1390,6 +1424,11 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  svelte-body@1.4.0:
+    resolution: {integrity: sha512-OCxtAozo/HaS57AZJOoARJHrOabjjhob1sLW8JgG+rrvHY0AZquf2Qcn9PT+jpVh9Y6DVNMMMSB1CZxQk5rrPw==}
+    peerDependencies:
+      svelte: ^3.47.0 || ^4.0.0
+
   svelte-check@3.7.1:
     resolution: {integrity: sha512-U4uJoLCzmz2o2U33c7mPDJNhRYX/DNFV11XTUDlFxaKLsO7P+40gvJHMPpoRfa24jqZfST4/G9fGNcUGMO8NAQ==}
     hasBin: true
@@ -1503,6 +1542,10 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  ukiyojs@4.2.0:
+    resolution: {integrity: sha512-Y3rmK+Kdq4JooPk1mEsYIOFUOlH6uDZm4NGQW37knbPlFgV9WmMmsYuimnBsubd++gLrfDPKzqEzz1rg5lMAbQ==}
+    engines: {node: '>=16'}
+
   update-browserslist-db@1.0.15:
     resolution: {integrity: sha512-K9HWH62x3/EalU1U6sjSZiylm9C8tgq2mSvshZpqc7QE69RaA2qjhkW2HlNA0tFpEbtyFz7HTqbSdN4MSwUodA==}
     hasBin: true
@@ -1592,6 +1635,8 @@ snapshots:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
+
+  '@darkroom.engineering/tempus@0.0.46': {}
 
   '@esbuild/aix-ppc64@0.20.2':
     optional: true
@@ -2083,6 +2128,10 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
+  clsx@1.2.1: {}
+
+  clsx@2.1.1: {}
+
   code-red@1.0.4:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
@@ -2115,6 +2164,8 @@ snapshots:
       source-map-js: 1.2.0
 
   cssesc@3.0.0: {}
+
+  csstype@3.1.3: {}
 
   debug@4.3.4:
     dependencies:
@@ -2462,6 +2513,11 @@ snapshots:
   kleur@4.1.5: {}
 
   known-css-properties@0.31.0: {}
+
+  lenis@1.0.45:
+    dependencies:
+      '@darkroom.engineering/tempus': 0.0.46
+      clsx: 2.1.1
 
   levn@0.4.1:
     dependencies:
@@ -2816,6 +2872,12 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+  svelte-body@1.4.0(svelte@4.2.16):
+    dependencies:
+      clsx: 1.2.1
+      csstype: 3.1.3
+      svelte: 4.2.16
+
   svelte-check@3.7.1(postcss-load-config@4.0.2(postcss@8.4.38))(postcss@8.4.38)(svelte@4.2.16):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
@@ -2945,6 +3007,8 @@ snapshots:
   type-fest@0.20.2: {}
 
   typescript@5.4.5: {}
+
+  ukiyojs@4.2.0: {}
 
   update-browserslist-db@1.0.15(browserslist@4.23.0):
     dependencies:

@@ -4,15 +4,20 @@
 	let star;
 
 	onMount(() => {
-		scroll((y) => {
-			star.style.transform = `rotate(${y.time}px)`;
-			console.log(y);
-		});
+		scroll(
+			animate('.star', {
+				rotate: [0, 360],
+				scale: [1, 1.5],
+				duration: 1000,
+				loop: true,
+				ease: 'linear'
+			})
+		);
 	});
 </script>
 
 <div
-	class="info min-w-screen fixed inset-0 flex flex-col items-center justify-center gap-4 text-xl uppercase"
+	class="info min-w-screen fixed inset-0 z-0 flex flex-col items-center justify-center gap-4 text-xl uppercase"
 >
 	<div class="flex w-72 flex-col gap-2">
 		<span class="flex justify-between">
