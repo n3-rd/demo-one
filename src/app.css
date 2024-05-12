@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Satoshi', sans-serif;
+	background-color: #10100e;
+	color: #ffffe3;
+	@apply overflow-x-hidden px-6;
+}
+.display {
+	font-family: 'Panchang', sans-serif;
+}
+
+.serif {
+	font-family: 'Stardom', sans-serif;
+}
