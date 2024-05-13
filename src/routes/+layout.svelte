@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Noise from '$lib/components/Noise.svelte';
 	import Preloader from '$lib/components/Preloader.svelte';
-	import { preloaderProgress } from '$lib/stores';
+	import { preloader } from '$lib/stores';
 	import '../app.css';
 	import Lenis from 'lenis';
 	import { onDestroy, onMount } from 'svelte';
+	let progress = 0;
 
 	onMount(() => {
 		const lenis = new Lenis();
@@ -20,10 +21,9 @@
 
 <Noise />
 
-{#if $preloaderProgress != 100}
-	<Preloader />
-{:else}
+<Preloader />
+<div class="main">
 	<slot></slot>
-{/if}
+</div>
 
 <style></style>

@@ -26,7 +26,7 @@
 			color: '#29231a'
 		},
 		{
-			title: 'Louis Vuitton',
+			title: 'Vuitton',
 			image: '/img/img-4.jpg',
 			index: 3,
 			color: '#b8b8b8'
@@ -67,8 +67,8 @@
 <div class="min-w-screen page relative flex items-center justify-center">
 	<Info />
 
-	<div class="filler z-20 mt-[100vh] h-[333vh]">
-		<section class="flex min-w-full flex-col items-center justify-center gap-6">
+	<div class="filler z-20 mt-[400vh]">
+		<section class="flex min-w-full flex-col items-center justify-center gap-1 lg:gap-6">
 			{#each projects as project}
 				<Project
 					title={project.title}

@@ -1,35 +1,47 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { preloaderProgress, startPreloader, stopPreloader } from '../stores';
-
+	import { preloader } from '../stores';
+	import imagesLoaded from 'imagesloaded';
 	let progress = 0;
-	preloaderProgress.subscribe((value) => {
-		progress = value;
+	onMount(() => {
+		// Get all img elements
+		const images = document.querySelectorAll('img');
+
+		images.forEach((img) => {
+			console.log(img);
+		});
+
+		let imgload = imagesLoaded(images, (instance) => {
+			console.log('all images are loaded');
+		});
+
+		imgload.on('progress', (instance, image) => {
+			progress = (instance.progressedCount / instance.images.length) * 100;
+			console.log(progress);
+			if (progress === 100) {
+				preloader.set(false);
+			}
+		});
 	});
 
-	onMount(() => {
-		startPreloader();
-		// Simulate page load completion after 5 seconds
-		setTimeout(() => {
-			stopPreloader();
-		}, 5000);
-	});
+	// Reactive statement
+	$: {
+		if (progress < 100) {
+			setTimeout(() => {
+				progress++;
+			}, 1800);
+		}
+	}
 </script>
 
-{#if progress < 100}
+{#if $preloader == true}
 	<div
-		class="absolute z-[999] h-screen min-w-full"
+		class="absolute z-[999] h-screen min-w-full bg-[#10100e]"
 		transition:fade={{ delay: 500, duration: 1000 }}
 	>
 		<div class="serif absolute bottom-4 text-[24vw]">
 			<span>{progress}%</span>
-		</div>
-	</div>
-{:else}
-	<div class="absolute z-[999] h-screen min-w-full transition-all duration-200 ease-in-out">
-		<div class="serif absolute bottom-4 text-[24vw]">
-			<span>100%</span>
 		</div>
 	</div>
 {/if}

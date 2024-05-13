@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      imagesloaded:
+        specifier: ^5.0.0
+        version: 5.0.0
       lenis:
         specifier: ^1.0.45
         version: 1.0.45
@@ -51,6 +54,9 @@ importers:
       eslint-plugin-svelte:
         specifier: ^2.35.1
         version: 2.39.0(eslint@8.57.0)(svelte@4.2.16)
+      imachi:
+        specifier: ^0.1.1
+        version: 0.1.1
       postcss:
         specifier: ^8.4.33
         version: 8.4.38
@@ -795,6 +801,9 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
+  ev-emitter@2.1.2:
+    resolution: {integrity: sha512-jQ5Ql18hdCQ4qS+RCrbLfz1n+Pags27q5TwMKvZyhp5hh2UULUYZUy1keqj6k6SYsdqIYjnmz7xyyEY0V67B8Q==}
+
   fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
 
@@ -898,6 +907,12 @@ packages:
   ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
+
+  imachi@0.1.1:
+    resolution: {integrity: sha512-yRWppP8uohSYam41TmQOMLVrYbvu4b9esTzG6B2/wP/tiGnH/WIiIxO+0l5Gkepw3HA2N6i+Wd0rB6RN8pgnsg==}
+
+  imagesloaded@5.0.0:
+    resolution: {integrity: sha512-/0JGSubc1MTCoDKVmonLHgbifBWHdyLkun+R/151E1c5n79hiSxcd7cB7mPXFgojYu8xnRZv7GYxzKoxW8BetQ==}
 
   import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -2337,6 +2352,8 @@ snapshots:
 
   esutils@2.0.3: {}
 
+  ev-emitter@2.1.2: {}
+
   fast-deep-equal@3.1.3: {}
 
   fast-glob@3.3.2:
@@ -2445,6 +2462,12 @@ snapshots:
   hey-listen@1.0.8: {}
 
   ignore@5.3.1: {}
+
+  imachi@0.1.1: {}
+
+  imagesloaded@5.0.0:
+    dependencies:
+      ev-emitter: 2.1.2
 
   import-fresh@3.3.0:
     dependencies:
